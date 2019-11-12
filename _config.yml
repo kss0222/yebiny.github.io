@@ -28,7 +28,7 @@ author:
   email:             nibey92@gmail.com
 
 # Fallback image and color
-image:               /assets/바다1.png
+image:               /assets/바다.PNG
 color:               '#4f86aa'
 
 # The font used for headings. Expects a string that is a valid CSS font-family value.
