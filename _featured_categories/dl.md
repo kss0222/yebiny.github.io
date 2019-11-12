@@ -1,7 +1,7 @@
 ---
 layout: list
-title: 딥러닝
-slug: doc
+title: Deep learning
+slug: dl
 menu: true
 submenu: true
 order: 7
