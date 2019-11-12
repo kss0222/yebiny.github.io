@@ -3,7 +3,7 @@
 # -----------------------------------------------------------------------------
 
 title:  .           
-
+logo : ![]({{ site.url }}{{ site.baseurl }}/assets/로고3.PNG )
 # The unique resource location of your page.
 # Set to `https://<username>.github.io` when hosting on GitHub Pages
 url:                 https://nibey92.github.io
