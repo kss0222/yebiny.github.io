@@ -15,7 +15,7 @@ tensorflow를 이용해서 간단한 Autoencoder을 구현해보도록 합니다
 
 먼저 실습에 필요한 라이브러리를 가져옵니다. tensorflow, numpy, matplotlib를 사용합니다. 또한 tensorflow에서 제공하는 mnist 데이터도 함께 불러오겠습니다. 
 
-```js
+```python
 
 #텐서플로, numpy, matplotlib의 라이브러리 임포트
 import tensorflow as tf
@@ -61,3 +61,80 @@ b_decode = tf.Variable(tf.random_normal([n_output])) #편향변수
 decoder = tf.nn.sigmoid(tf.add(tf.matmul(encoder,W_decode),b_decode)) # 입력값을 은닉층의 크기로, 출력값을 입력층의 크기로 
 ```
 
+### Model training
+
+#### loss function
+
+* $$\frac{1}{m} \sum^{m}_{i} (x_{i}-y_{i})^2$$
+
+```python
+#손실함수(두 값의 거리차이) = X(평가하기 위한 실측값) - 디코더의 결과값
+cost = tf.reduce_mean(tf.pow(X-decoder,2))
+
+#최적화 함수 RMSPropOptimizer로 cost를 최소화 함
+optimizer = tf.train.RMSPropOptimizer(learning_rate).minimize(cost)
+
+#학습진행
+init = tf.global_variables_initializer() #변수 초기화
+sess = tf.Session() # Session 오픈
+sess.run(init) # 텐서플로우로 변수들 초기화 완료(학습 진행 준비 완료)
+
+total_batch = int(mnist.train.num_examples / batch_size) #배치 갯수
+
+for epoch in range(training_epoch): #train 테이터 셋으로 부터 전체 배치를 불러옴
+    total_cost = 0
+    
+    for i in range(total_batch): #모든 배치들에 대하여 최적화 수행
+        batch_xs, batch_ys = mnist.train.next_batch(batch_size) # 배치사이즈에 맞게 x, y값 생성
+        _, cost_val = sess.run([optimizer, cost], feed_dict={X:batch_xs}) # X값(이미지데이터)를 통해 최적화 진행
+        total_cost += cost_val 
+        
+    print('Epoct:', '%04d' % (epoch + 1), 'Avg.cost = ', '{:.4f}'.format(total_cost/total_batch)) # Epoct 별 cost 보여줌
+
+print('최적화 완료!')
+
+```
+
+출력 결과는 다음과 같습니다.
+
+```python
+Epoch: 0001 Avg.cost =  0.2053
+Epoch: 0002 Avg.cost =  0.0570
+Epoch: 0003 Avg.cost =  0.0470
+Epoch: 0004 Avg.cost =  0.0422
+Epoch: 0005 Avg.cost =  0.0395
+Epoch: 0006 Avg.cost =  0.0382
+Epoch: 0007 Avg.cost =  0.0367
+Epoch: 0008 Avg.cost =  0.0359
+Epoch: 0009 Avg.cost =  0.0351
+Epoch: 0010 Avg.cost =  0.0329
+Epoch: 0011 Avg.cost =  0.0320
+Epoch: 0012 Avg.cost =  0.0314
+Epoch: 0013 Avg.cost =  0.0311
+Epoch: 0014 Avg.cost =  0.0307
+Epoch: 0015 Avg.cost =  0.0301
+Epoch: 0016 Avg.cost =  0.0294
+Epoch: 0017 Avg.cost =  0.0291
+Epoch: 0018 Avg.cost =  0.0288
+Epoch: 0019 Avg.cost =  0.0284
+Epoch: 0020 Avg.cost =  0.0279
+최적화 완료!
+```
+### 결과 확인
+
+```python
+#10개의 확인 이미지 추출
+sample_size = 10
+samples = sess.run(decoder, feed_dict={X:mnist.test.images[:sample_size]}) # 디코더로 생성해낸 결과
+
+fig, ax = plt.subplots(2, sample_size, figsize=(sample_size, 2)) # 이미지를 2줄로 보여줄 수 있도록 셋팅
+
+for i in range(sample_size):
+    ax[0][i].set_axis_off() # 입력된 이미지
+    ax[1][i].set_axis_off() # 생성된 이미지(출력값)
+    ax[0][i].imshow(np.reshape(mnist.test.images[i], (28,28))) #imshow : 이미지 출력함수
+    ax[1][i].imshow(np.reshape(samples[i], (28,28)))
+
+plt.show()
+
+```
