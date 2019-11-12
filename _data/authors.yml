@@ -8,7 +8,7 @@ isme2n:
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    바쁘게 사는 달팽이
+    바쁘게 사는 바다거북
 
   # This photo will be used in the about section
   picture:
