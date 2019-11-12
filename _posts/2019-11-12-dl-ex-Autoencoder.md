@@ -17,12 +17,10 @@ tensorflow를 이용해서 간단한 Autoencoder을 구현해보도록 합니다
 
 ```python
 
-#텐서플로, numpy, matplotlib의 라이브러리 임포트
 import tensorflow as tf
 import numpy as np
 import matplotlib.pyplot as plt
 
-#MNIST 모듈 임포트
 from tensorflow.examples.tutorials.mnist import input_data
 mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 
