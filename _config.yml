@@ -2,8 +2,8 @@
 #  User configuration
 # -----------------------------------------------------------------------------
 
-title:  .           
-logo : ![]({{ site.url }}{{ site.baseurl }}/assets/로고3.PNG )
+title: Nibey           
+
 # The unique resource location of your page.
 # Set to `https://<username>.github.io` when hosting on GitHub Pages
 url:                 https://nibey92.github.io
@@ -11,6 +11,8 @@ url:                 https://nibey92.github.io
 # Set to '' when hosting a blog on GitHub Pages, ie on `//<username>.github.io`
 # Set to '/<reponame>' when using the `gh-pages` branch of a repository
 baseurl:             ""
+
+logo : ![]({{ site.url }}{{ site.baseurl }}/assets/로고3.PNG )
 
 # A very short description of your page
 tagline:     .        
