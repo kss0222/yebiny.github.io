@@ -1,6 +1,6 @@
 ---
 layout: tag-blog
-title: 딥러닝 모델
+title: DL모델
 slug: model
 category: dl
 menu: false
