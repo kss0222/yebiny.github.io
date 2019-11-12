@@ -1,10 +1,10 @@
 ---
 layout: list
-title: Documents
+title: 딥러닝
 slug: doc
 menu: true
 submenu: true
 order: 7
 description: >
-  어플리케이션의 문서나 업데이트등이 담깁니다.
+  딥러닝 개념을 알아봅니다.
 ---
