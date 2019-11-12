@@ -1,6 +1,6 @@
 ---
 layout: tag-blog
-title: Concept
+title: 기초개념
 slug: concept
 category: dl
 menu: false
