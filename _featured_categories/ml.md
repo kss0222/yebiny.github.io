@@ -1,6 +1,6 @@
 ---
 layout: list
-title: Machine learning
+title: Machine earning
 slug: ml
 menu: true
 submenu: true
