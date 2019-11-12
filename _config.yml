@@ -12,7 +12,7 @@ url:                 https://nibey92.github.io
 # Set to '/<reponame>' when using the `gh-pages` branch of a repository
 baseurl:             ""
 
-logo : ![]({{ site.url }}{{ site.baseurl }}/assets/로고3.PNG )
+#logo : ![]({{ site.url }}{{ site.baseurl }}/assets/로고3.PNG )
 
 # A very short description of your page
 tagline:     .        
