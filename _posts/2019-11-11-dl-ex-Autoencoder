@@ -1,0 +1,62 @@
+---
+layout: post
+title:  "Autoencoder"
+subtitle:  "Tensorflow를 이용하여 간단한 Autoencoder을 구현해 본다."
+categories: dl
+tags: ex
+
+---
+
+## 구현
+
+tensorflow를 이용해서 간단한 Autoencoder을 구현해보도록 합니다.
+
+### Library import
+
+먼저 실습에 필요한 라이브러리를 가져옵니다. tensorflow, numpy, matplotlib를 사용합니다. 또한 tensorflow에서 제공하는 mnist 데이터도 함께 불러오겠습니다. 
+
+```
+#텐서플로, numpy, matplotlib의 라이브러리 임포트
+import tensorflow as tf
+import numpy as np
+import matplotlib.pyplot as plt
+
+#MNIST 모듈 임포트
+from tensorflow.examples.tutorials.mnist import input_data
+mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
+
+```
+
+
+### Set parameter
+
+하이퍼파라미터로 사용할 옵션들을 정합니다. 
+
+```python
+learning_rate = 0.01 #최적화 함수에서 사용할 학습률
+training_epoch = 20  #전체 데이터를 학습할 총 횟수
+batch_size = 100     #미니배치로 한번에 학습할 데이터(이미지)의 갯수
+
+n_input = 28*28      #이미지 크기 28*28 = 784
+n_hidden = 256       #은닉층의 뉴런 개수
+n_output = 28*28     #input 이미지의 크기와 동일 
+```
+
+### Model development
+
+```python
+
+# X라는 플레이스 홀더를 설정
+X = tf.placeholder(tf.float32, [None, n_input])
+
+# ENCODER 인코더, n_hidden개의 뉴런을 가진 은닉층 만듬
+W_encode = tf.Variable(tf.random_normal([n_input, n_hidden]))  #가중치 
+b_encode = tf.Variable(tf.random_normal([n_hidden])) #편향변수
+encoder = tf.nn.sigmoid(tf.add(tf.matmul(X,W_encode),b_encode)) #sigmoid 활성화 함수 적용
+
+# DECODER 디코더, n_output개 이미지 출력
+W_decode = tf.Variable(tf.random_normal([n_hidden, n_output])) #가중치
+b_decode = tf.Variable(tf.random_normal([n_output])) #편향변수 
+decoder = tf.nn.sigmoid(tf.add(tf.matmul(encoder,W_decode),b_decode)) # 입력값을 은닉층의 크기로, 출력값을 입력층의 크기로 
+```
+
