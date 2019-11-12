@@ -1,7 +1,7 @@
 ---
 layout: list
-title: 머신러닝
-slug: review
+title: Machine learning
+slug: ml
 menu: true
 submenu: true
 order: 6
