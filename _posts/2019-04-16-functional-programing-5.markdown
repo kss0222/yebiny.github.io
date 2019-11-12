@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[함수형 자바스크립트]5.복잡성을 줄이는 디자인 패턴"
-subtitle:   "함수형 자바스크립트"
-categories: devlog
-tags: nodejs javascript
+title:  "post1"
+subtitle:   "post1"
+categories: dl
+tags: concept
 
 ---
 
