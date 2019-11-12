@@ -1,6 +1,6 @@
 ---
 layout: tag-blog
-title: 구현예제
+title: 3. 구현 예제
 slug: ex
 category: dl
 menu: false
