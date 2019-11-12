@@ -7,9 +7,7 @@ tags: ex
 
 ---
 
-## 구현
-
-tensorflow를 이용해서 간단한 Autoencoder을 구현해보도록 합니다.
+Tensorflow를 이용하여 간단한 Autoencoder을 구현해 본다.
 
 ### Library import
 
