@@ -1,6 +1,6 @@
 ---
 layout: tag-blog
-title: Concept
+title: 1. 기초 개념
 slug: concept
 category: ml
 menu: false
