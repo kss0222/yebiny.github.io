@@ -1,6 +1,6 @@
 ---
 layout: tag-blog
-title: DL모델
+title: 모델종류
 slug: model
 category: dl
 menu: false
