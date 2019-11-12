@@ -1,6 +1,6 @@
 ---
 layout: tag-blog
-title: 모델종류
+title: 2. 모델 종류
 slug: model
 category: dl
 menu: false
