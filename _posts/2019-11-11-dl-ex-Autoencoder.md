@@ -15,7 +15,8 @@ tensorflow를 이용해서 간단한 Autoencoder을 구현해보도록 합니다
 
 먼저 실습에 필요한 라이브러리를 가져옵니다. tensorflow, numpy, matplotlib를 사용합니다. 또한 tensorflow에서 제공하는 mnist 데이터도 함께 불러오겠습니다. 
 
-```
+```js
+
 #텐서플로, numpy, matplotlib의 라이브러리 임포트
 import tensorflow as tf
 import numpy as np
