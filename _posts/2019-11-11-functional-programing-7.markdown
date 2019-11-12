@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[함수형 자바스크립트]7.함수형 최적화"
-subtitle:   "함수형 자바스크립트"
-categories: devlog
-tags: nodejs javascript
+title:  "post2"
+subtitle:   "post2"
+categories: ml
+tags: concept
 
 ---
 
