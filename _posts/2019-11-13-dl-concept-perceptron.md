@@ -16,7 +16,7 @@ tags: concept
 
 사람의 뇌는 신경계를 구성하는 주된 세포인 뉴런을 약 1000억개 정도 가지고 있으며 각 뉴런들은 어떤 신호를 입력 받고 그에 대한 신호를 출력한다. 
 
-![03]({{ site.url }}/assets/perception-03.PNG)
+![03]({{ site.url }}/assets/perception-03.png)
 
 이러한 개념을 기반으로 1957년에 코넬 항공 연구소(Cornell Aeronautical Lab)의 프랑크 로젠블라트 (Frank Rosenblatt)는 초기 형태의 인공신경망을 제안하였다. 다수 입력으로 부터 하나의 결과를 내보내는 알고리즘이며 이를 도식화한 그림은 아래와 같다. 
 
