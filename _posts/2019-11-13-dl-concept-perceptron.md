@@ -7,8 +7,10 @@ tags: concept
 ---
 
 현재 인공지능 분야에서 가장 널리 쓰이고 있는 각종 복잡한 딥러닝 알고리즘들은 수십년전 퍼셉트론부터 시작한다. 따라서 딥러닝을 시작하기 위해서는 초기 인공신경망인 Perceptron 개념에 대해서 먼저 이해할 필요가 있다.
----
+
+
 ## (1) 개요
+---
 
 ### 사람의 뇌를 모방하다.
 
@@ -26,13 +28,16 @@ tags: concept
 
 ## (2) Sigle Layer Perceptron
 ---
+
 우선 위에서 우리가 만든 퍼셉트론 모델을 좀 더 '딥러닝' 스럽게 그리고 싶은데 사실 현재 딥러닝 노드나 알고리즘들을 표현하는 방법이 비슷하면서도 다양하다. 나는 입력/출력 데이터 값은 네모, 함수는 원으로 통일하는 걸 선호하는 편이다. 따라서 위의 간단한 단층 perception을 다음과 같이 그릴 수 있다.
 
-![01]({{ site.url }}/assets/perception-01.PNG)
+
+![02]({{ site.url }}/assets/perception-02.PNG)
 
 그런데 여기서 보통 가중치 합 함수와 활성함수는 거의 함께 사용되기 때문에 이렇게 표현할 수도 있다.
 
-![02]({{ site.url }}/assets/perception-02.PNG)
+
+![01]({{ site.url }}/assets/perception-01.PNG)
 
 이 그림이 내가 선호하는 딥러닝 네트워크 표현 방식이다. 그림에서 데이터가 입력되는 층을 `Input Layer`, 가운데 노드를 `Hidden Layer`, 값이 출력되는 층을 `Output Layer`라고 한다. Hidden Layer에 있는 perceptron 이 한개이기 때문에 `Single Layer perceptron`이라고 한다. 그럼 이 간단한 모델로 어떤 문제를 풀어볼 수 있을까?
 
