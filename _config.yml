@@ -6,7 +6,7 @@ title: Nibey's Blog
 
 # The unique resource location of your page.
 # Set to `https://<username>.github.io` when hosting on GitHub Pages
-url:                 https://nibey92.github.io
+url:                 https://yebiny.github.io
 
 # Set to '' when hosting a blog on GitHub Pages, ie on `//<username>.github.io`
 # Set to '/<reponame>' when using the `gh-pages` branch of a repository
@@ -52,7 +52,7 @@ google_analytics:
 disqus_shortname:    Nibey
 
 # This text will appear in the footer of every page. Markdown enabled.
-copyright:           '&copy; 2017. by isme2n'
+copyright:           '&copy; 2019. by Nibey'
 
 # Format of the permalinks
 permalink:           pretty
